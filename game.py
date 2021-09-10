@@ -1,6 +1,10 @@
 import random
 import time
 
+with open('Dungeon-of-pain.txt') as f :
+    castle_txt= f.read()
+
+
 yes_or_no = ["yes", "no"]
 
 doors = ['iron', 'blue', 'red', 'green']
@@ -99,6 +103,7 @@ def intro():
 
 def courtyard():
     delayedp("Greetings, " + character_name + "! If thats even your name...")
+
     delayedp("You look around the courtyard where to go... where to go....")
 
     # where do you want to go
@@ -119,6 +124,7 @@ def courtyard():
 
 
 def play_game():
+    delayedp(castle_txt)
     delayedp('Welcome to the dungeon of pain!')
     delayedp('Would you like to play a game?!')
     response = ""
